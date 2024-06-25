@@ -9,8 +9,9 @@
   </head>
   <body id="app">
     <h1>Modifier la taille du texte.</h1>
-    <button @click="agrendire">Augmanter la taille du texte</button
-    ><span>la taille du texte est actuèlement de {{taille}}px </span>
-    <p v-bind:style ="{fontSize : taille + "px" }">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis tenetur inventore hic consequuntur doloribus asperiores voluptatibus eum. Excepturi quod tempore magnam nesciunt suscipit accusamus, praesentium ratione? Reprehenderit deleniti omnis dolorum.</p>
+    <button @click="agrendire">Augmanter la taille du texte</button>
+    <button @click="retrecir">Rétrésire la taille du texte</button>
+    <span>la taille du texte est actuèlement de {{taille}}px </span>
+    <p v-bind:style ="{fontSize : taille + 'px' }">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis tenetur inventore hic consequuntur doloribus asperiores voluptatibus eum. Excepturi quod tempore magnam nesciunt suscipit accusamus, praesentium ratione? Reprehenderit deleniti omnis dolorum.</p>
   </body>
 </html>
