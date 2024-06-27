@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date de naissance</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body id="date">
+    <h1>Ma date de naissance {{date_actuel}} </h1>
+    <span>Date de naissance {{date_naissance}} </span>
+    <input type="datetime-local" v-model="date_naissance" />
+    <input type="button" value="Calculer" />
+    <p>Sélectionnez une date dans le passé</p>
+  </body>
+</html>
