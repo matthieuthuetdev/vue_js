@@ -1,12 +1,11 @@
+const date = new Date()
 const app = {
-    data(){
-        return{
+    data() {
+        return {
             date_naissance: "",
-            date_atcuel: Date.toLocaldatString()
+            date_actuel: date.toDateString("y/m/d"),
+            age: 0
         }
-    },
-    calculer(){
-        tolocaldat
     }
 }
 Vue.createApp(app).mount("#date")
