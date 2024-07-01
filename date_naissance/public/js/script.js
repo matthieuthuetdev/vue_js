@@ -12,7 +12,7 @@ const app = {
         calculer_age() {
             const naissance = new Date(this.date_naissance)
             this.age = this.date_actuel - this.date_naissance
-            console.log(naissance.toString)
+            console.log(this.age.toString())
 
         }
     }
