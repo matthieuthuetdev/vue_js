@@ -11,10 +11,12 @@ const app = {
     methods: {
         calculer_age() {
             const naissance = new Date(this.date_naissance)
-            this.age = this.date_actuel - this.date_naissance
-            console.log(this.age.toString())
+            const age = this.date_actuel - naissance
+            age = Math.floor(age / 1000 / 60 / 60 / 24 / 365)
+            this.age = age
+            console.log(this.age)
 
         }
     }
-} 
+}
 Vue.createApp(app).mount("#date")
