@@ -8,13 +8,13 @@ const app = {
             phrase_age: ""
         }
     },
-    methods :{
-        calculer_age(){
+    methods: {
+        calculer_age() {
             const naissance = new Date(this.date_naissance)
             this.age = this.date_actuel - this.date_naissance
-            console.log(this.age)
+            console.log(naissance.toString)
 
         }
     }
-}
+} 
 Vue.createApp(app).mount("#date")
