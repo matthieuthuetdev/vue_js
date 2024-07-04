@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="FR-FR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +8,13 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body id="date">
-    <h1>Ma date de naissance {{date_actuel}} </h1>
+    <h1>Ma date de naissance {{date_actuel}}</h1>
     <span>Date de naissance {{date_naissance}} </span>
     <input type="datetime-local" v-model="date_naissance" />
     <input type="button" value="Calculer" @click="calculer_age" />
-    <p>Sélectionnez une date dans le passé</p>
-    <p>vous avez {{age}}</p>
+    <div  v-if="age != nudefined">
+    <p>vous aites né le {{date_naissance_formater}} </p>
+    <p >Il s'est écoulé <span style="color: blue;">{{age}}</span> année<span v-if="age > 1">s</span> depuis votre naissance. </p>
+  </div>
   </body>
 </html>
