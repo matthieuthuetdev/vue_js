@@ -12,9 +12,15 @@
     <span>Date de naissance {{date_naissance}} </span>
     <input type="datetime-local" v-model="date_naissance" />
     <input type="button" value="Calculer" @click="calculer_age" />
-    <div  v-if="age != nudefined">
-    <p>vous aites né le {{date_naissance_formater}} </p>
-    <p >Il s'est écoulé <span style="color: blue;">{{age}}</span> année<span v-if="age > 1">s</span> depuis votre naissance. </p>
-  </div>
+    <div v-if="age != undefined">
+      <p>vous êtes né le <span style="color: blue"> {{date_naissance_formater}}</span> à <span style="color: blue"> {{heure_naissance}}</span></p>
+      <p>
+        Il s'est écoulé <span style="color: blue">{{age}}</span> année<span
+          v-if="age > 1"
+          >s</span
+        >
+        depuis votre naissance.
+      </p>
+    </div>
   </body>
 </html>
